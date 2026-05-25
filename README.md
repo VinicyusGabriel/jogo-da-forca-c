@@ -48,21 +48,10 @@ O projeto utiliza:
 ### Compilar
 
 ```bash
-gcc forca.c -o forca
+gcc forca.c -o app.exe
 ```
-
-### Executar
-
-#### Windows
-
-```bash
-forca.exe
 ```
-
-#### Linux / Chromebook
-
-```bash
-./forca
+./app.exe
 ```
 
 ---
