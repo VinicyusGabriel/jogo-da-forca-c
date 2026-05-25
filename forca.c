@@ -20,7 +20,7 @@ int main(){
     
     do
     {
-        system("clear");
+        system("cls");
         printf("=========================\n");
         printf("======= JOGO DA FORCA ===\n");
         printf("=========================\n");
@@ -139,7 +139,7 @@ int main(){
 //Mensagem final
         if (venceu == 1)
         {
-        system("clear");
+        system("cls");
         printf("=========================\n");
         printf("======= JOGO DA FORCA ===\n");
         printf("=========================\n");
@@ -150,7 +150,7 @@ int main(){
             printf("%c", palavra_secreta[i]);
         }
     } else {
-        system("clear");
+        system("cls");
         printf("=========================\n");
         printf("======= JOGO DA FORCA ===\n");
         printf("=========================\n");
