@@ -75,9 +75,13 @@ system("clear");
 ## Autores
 
 - Vinicyus Gabriel Delfino
+<<<<<<< HEAD
 - Bernardo Machado
 
 # Universidade
 
 Universidade do Vale do Itajaí - UNIVALI
 Disciplina de Algoritmos e Lógica de Programação
+=======
+- Bernardo Machado
+>>>>>>> fd01a327caf378a235cc5bdd3329f9a0b856d651
