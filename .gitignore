@@ -1,0 +1,10 @@
+# Arquivos executáveis
+*.exe
+
+# Arquivos de build comuns
+*.o
+*.out
+
+# Pastas de build (se usar)
+build/
+bin/
