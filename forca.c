@@ -8,10 +8,13 @@
 #define TAMANHO 5
 
 int main(){
+    // Variaveis pricipais
     char palavra_secreta[TAMANHO] = {'M', 'U', 'N', 'D', 'O'};
     char mascara[TAMANHO] = {'_', '_', '_', '_', '_'};
     char letras_tentadas[MAXIMO_TENTATIVAS];
     char letra;
+
+    // Variaveis Auxiliares
     int letras_encontradas = 0;
     int acertou = 0;
     int erros = 0;
@@ -25,7 +28,8 @@ int main(){
         printf("======= JOGO DA FORCA ===\n");
         printf("=========================\n");
         printf("\n");
-     if (tentativas > 0) {
+
+     if (tentativas > 0) {  // Mostra letras já tentadas e erros
         printf("Letras tentadas: ");
         for (int i = 0; i < tentativas; i++)
         {
@@ -105,7 +109,8 @@ int main(){
         printf("\nDigite uma letra: ");
         scanf(" %c", &letra);
         letra = toupper(letra); // Trasnforma letra minuscula em maiuscula
-        letras_tentadas[tentativas] = letra; // Guarda a letra no vetor
+
+        letras_tentadas[tentativas] = letra; // Guarda letra tentada
         tentativas++; 
         for (int i = 0; i < TAMANHO; i++) 
         {
@@ -115,14 +120,13 @@ int main(){
               acertou = 1;
           }
         }
-        if (acertou == 0)
+        if (acertou == 0)  // Se não acertou, adiciona erro
         {
             erros++;
         }
         
         letras_encontradas = 0;
-
-        for (int i = 0; i < TAMANHO; i++)
+        for (int i = 0; i < TAMANHO; i++) // Conta letras descobertas
         {
             if (mascara[i] != '_')
             {
@@ -130,7 +134,7 @@ int main(){
             }
         }
 
-        if (letras_encontradas == TAMANHO)
+        if (letras_encontradas == TAMANHO)  // Verifica vitória
         {
             venceu = 1;
         } 
