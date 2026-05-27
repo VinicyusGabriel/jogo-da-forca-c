@@ -1,3 +1,7 @@
+//Alunos:
+//Bernardo Machado
+//Vinicyus Gabriel Delfino
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -23,7 +27,7 @@ int main(){
     
     do
     {
-        system("cls");
+        system("clear");
         printf("=========================\n");
         printf("======= JOGO DA FORCA ===\n");
         printf("=========================\n");
@@ -143,7 +147,7 @@ int main(){
 //Mensagem final
         if (venceu == 1)
         {
-        system("cls");
+        system("clear");
         printf("=========================\n");
         printf("======= JOGO DA FORCA ===\n");
         printf("=========================\n");
@@ -153,11 +157,32 @@ int main(){
         {
             printf("%c", palavra_secreta[i]);
         }
+        printf("\n");
     } else {
-        system("cls");
+        system("clear");
         printf("=========================\n");
         printf("======= JOGO DA FORCA ===\n");
         printf("=========================\n");
+        printf("\n");
+
+     if (tentativas > 0) { 
+        printf("Letras tentadas: ");
+        for (int i = 0; i < tentativas; i++)
+        {
+            if (i == tentativas - 1)
+            {
+            printf("%c", letras_tentadas[i]);    
+            } else
+            printf("%c, ", letras_tentadas[i]);
+        }
+        printf("\n\nErros: %d/%d\n", erros, MAXIMO_ERROS);
+        printf("\n");
+    }
+        printf("   ====||\n");
+        printf("   O   ||\n");
+        printf("  /|\\  ||\n");
+        printf("  / \\  ||\n");
+        printf("=======||\n");
         printf("Voce perdeu. Game over!\n");
         printf("Palavra correta: ");
         for (int i = 0; i < TAMANHO; i++)
