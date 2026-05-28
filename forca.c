@@ -110,9 +110,21 @@ int main(){
         }
 
         acertou = 0;
-        printf("\nDigite uma letra: ");
-        scanf(" %c", &letra);
-        letra = toupper(letra); // Trasnforma letra minuscula em maiuscula
+    printf("\nDigite uma letra: ");
+    scanf(" %c", &letra);
+
+    if (!isalpha(letra)) // Verifica (SE NAO for letra, entao:)
+    {
+    printf("\nEntrada invalida! Digite apenas letras.\n");
+    printf("Pressione Enter para continuar...");
+    
+    getchar(); //Remover /n armazenado
+    getchar(); //Esperar o usuario digitar enter
+
+    continue; // Faz o loop voltar
+    }
+
+    letra = toupper(letra); // Trasnforma letra minuscula em maiuscula
 
         letras_tentadas[tentativas] = letra; // Guarda letra tentada
         tentativas++; 
